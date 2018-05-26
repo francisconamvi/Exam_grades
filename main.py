@@ -39,7 +39,10 @@ def New():
     
     #Putting it into a file
     for i in range(len(subjects)):
-        new_file.write(subjects[i])
+        new_file.write(str(list(subjects.keys())[i])+"\n")
+        for j in range(3):
+            if (str(list(subjects.values())[i][j])) != "": new_file.write(str(list(subjects.values())[i][j])+"\n")
+        new_file.write("\n")
 
 #MAIN
 subjects = dict()
